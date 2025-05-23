@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      html {
+        scroll-behavior: smooth;
+    }
+      </style>
+    </head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">会社紹介</a></li>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slideshow">
+    <img src="IMG_0372.JPG" class="slide active" alt="スライド1">
+    <img src="IMG_0436.JPG" class="slide" alt="スライド2">
+    <img src="IMG_0489.JPG" class="slide" alt="スライド3">
+  </div>
+
+  <h1 id="about" class="fade-in">ようこそ！俺の会社へ</h1>
+  <p>俺の会社は、スタジオの内装、ライブハウス改装、Web制作を手がけてるやで！</p>
+  <h2 id="services">📌主なサービス</h2>
+  <ul>
+    <li>レンタルスタジオの内装</li>
+    <li>ライブハウスの音響・照明施工</li>
+    <li>Webサイトの制作（VSCodeでガチ）</li>
+  </ul>
+  <h2 id="gallery">ギャラリー</h2>
+  <img src="IMG_0578.JPG" alt="廃墟風スタジオ" width="300" height="200">
+<h2 id="contact">お問い合わせ</h2>
+<form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdWsBReVfbvktVYoLjAWM9IN-0GmHcVs9DHFXWBOWzkQlagDA/formResponse" method="post" target="hidden_iframe">
+  <label>お名前</label><br>
+  <input type="text" name="entry.821089756" required><br><br>
+
+  <label>メールアドレス</label><br>
+  <input type="email" name="entry.232617713" required><br><br>
+
+  <label>メッセージ</label><br>
+  <textarea name="entry.1368886084" rows="5" required></textarea><br><br>
+
+  <button type="submit" class="btn">送信</button>
+</form>
+
+<!-- サンクスモーダル -->
+<div id="thankYouOverlay" style="display: none;">
+  <div id="thankYouMessage">
+    <p>送信ありがとうございます！<br>メッセージを受け取りました。</p>
+    <button onclick="closeOverlay()">閉じる</button>
+  </div>
+</div>
+
+<!--送信先を隠すためのiframe-->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+<section class="news">
+  <h2>最新ニュース</h2>
+  <ul class="news-list">
+    <li>
+      <span class="date">2025.04.15</span>
+    <a href="#">新しいスタジオが完成しました！</a>
+    </li>
+    <li>
+      <span class="date">2025.04.10</span>
+      <a href="#">ライブハウス改装レポートを公開しました。</a>
+    </li>  
+    <li>
+      <span class="date">2025.04.01</span>
+      <a href="#">Web制作案件スタート！</a>
+    </li>
+  </ul>
+</section>
+<script src="script.js"></script>
+
+<footer class="site-footer">
+  <p>&copy; 2025 俺の会社. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#">X<span class="footnote">（旧Twitter）</span></a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Youtube</a></li>
+  </ul>
+</footer>
+</body>
+</html>
