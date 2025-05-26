@@ -48,3 +48,18 @@ document.addEventListener('DOMContentLoaded', function () {
 function closeOverlay() {
     document.getElementById("thankYouOverlay").style.display = "none";
 }
+
+// クロールでフェードイン表示
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const scrollHandler = () => {
+    fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+};
+
+window.addEventListener('scroll', scrollHandler);
+window.addEventListener('load', scrollHandler);
