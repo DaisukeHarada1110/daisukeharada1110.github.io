@@ -349,3 +349,13 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* 画像ホバーアニメーション */
+.hover-zoom {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);       /* すこし拡大 */
+    filter: brightness(0.85);     /* すこし暗くなる */
+}
