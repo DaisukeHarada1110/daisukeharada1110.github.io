@@ -84,6 +84,8 @@ img{
 
 .slide {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -359,3 +361,55 @@ body {
     transform: scale(1.05);       /* すこし拡大 */
     filter: brightness(0.85);     /* すこし暗くなる */
 }
+
+.carousel-container {
+    max-width: 880px; /* スライダー全体の最大幅 */
+    width: 90%;       /* レスポンシブに対応する */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
